@@ -1,0 +1,245 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  overflow-x: visible;
+}
+body
+{
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+/*Section header */
+header {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 63px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: white;
+  font-size: 25px;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+header i{
+  padding: 50px;
+  color: rgb(29, 66, 252);
+  font-size: 40px;
+}
+
+header i{
+  animation: logo 2s linear infinite;
+}
+
+@keyframes logo {
+  0%, 100%{
+      transform: translateX(2rem);
+  }
+  50%{
+      transform: translateX(0rem);
+  }
+}
+
+/* Section nav */
+.menu{
+  align-items: center;
+  margin: 10px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  float: left;
+  border-radius: 10px;
+}
+
+.menu a{
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Section main */
+
+main {
+  /* background: #4551BF; */
+  margin: auto;
+  width: 95%;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  min-height: 200px;
+}
+.contenedor .tarjeta_encriptar,
+.contenedor .tarjeta_cifrado {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 48%;
+  margin: auto;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 5px gray;
+}
+
+.contenedor .descripcion{
+  display: flex;
+  width: 95%;
+  padding: 10px;
+  margin: auto;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 5px gray;
+}
+
+.contenedor .descripcion p{
+  color: white;
+  text-align: justify;
+}
+
+.contenedor .descripcion p span{
+  color: blue;
+}
+
+.contenedor .descripcion p a{
+  cursor: pointer;
+  color: blue;
+}
+
+form {
+  width: 90%;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+label {
+  display: block;
+  margin: 5px;
+  color: white;
+}
+
+textarea {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  width: 90%;
+  font-size: 16px;
+  color:white;
+  background-color: rgb(29, 66, 252);
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.btn {
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  margin-left: 10px;
+}
+
+.negro {
+  background: #494a4a;
+}
+
+/* Mensaje de error */
+.mensaje-error {
+  padding: 5px;
+  color: rgb(240, 127, 127);
+  display: block;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* Footer */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+footer a i{
+  font-size: 25px;
+  padding-right: 20px;
+  color: red;
+}
+
+/* Media query */
+@media (max-width: 420px) {
+  .menu{
+    display: block;
+  }
+  .contenedor .tarjeta_encriptar .botones {
+    display: flex;
+  }
+  .botones .btn {
+    width: 40%;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  footer {
+    position: relative;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu{
+    align-items: center;
+  }
+  form {
+    margin: 0;
+  }
+  .botones {
+    display: block;
+  }
+  footer {
+    position: relative;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .contenedor {
+    display: block;
+  }
+  .contenedor .tarjeta_encriptar,
+  .contenedor .tarjeta_cifrado {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+  textarea {
+    width: 90%;
+  }
+  .botones {
+    display: flex;
+    justify-content: center;
+  }
+  .btn {
+    margin-left: 10px;
+  }
+  footer {
+    position: relative;
+  }
+}
